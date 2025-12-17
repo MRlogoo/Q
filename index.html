@@ -1,78 +1,314 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta name="google-site-verification" content="d0gzqtsPCfeYKuLxNQdNnk33e_ly7A3zusIim9J0AlQ" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شهر آموزش</title>
+    <title>MR LOGO - وب‌سایت رسمی شما</title>
+    
+    <!-- فونت آیکون‌ها (برای ظاهر حرفه‌ای‌تر) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* -------------------- تنظیمات پایه و فونت -------------------- */
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap');
+
+        :root {
+            --primary-color: #007bff; /* آبی اصلی */
+            --secondary-color: #28a745; /* سبز ثانویه */
+            --text-dark: #333;
+            --text-light: #f8f9fa;
+            --bg-light: #fff;
+            --bg-dark: #212529;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            background-color: #f0f8ff; /* آبی خیلی روشن */
-            color: #000;
+            padding: 0;
         }
-        header {
-            background-color: #0078d7; /* آبی ویندوز */
-            color: white;
-            padding: 20px;
-            text-align: center;
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            direction: rtl; /* برای زبان فارسی */
         }
-        header img {
-            width: 100px;
-            display: block;
-            margin: 0 auto 10px;
-        }
-        nav {
-            background-color: #e6f0fa;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 10px;
+
+        a {
             text-decoration: none;
-            color: #0078d7;
-            font-weight: bold;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
         }
-        main {
-            padding: 20px;
-            min-height: 400px;
+
+        a:hover {
+            color: var(--secondary-color);
         }
-        footer {
-            background-color: #0078d7;
-            color: white;
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* -------------------- نوار ناوبری (Navbar) -------------------- */
+        header {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: var(--text-light);
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            margin-left: 25px;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* -------------------- بخش قهرمان (Hero Section) -------------------- */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x800?text=Background+Image+Placeholder') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 150px 0;
             text-align: center;
-            padding: 15px;
+        }
+
+        #hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--bg-light);
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* -------------------- بخش خدمات (Features) -------------------- */
+        #services {
+            padding: 80px 0;
+            background-color: #f4f4f4;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: var(--text-dark);
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .feature-item {
+            flex: 1 1 calc(33% - 30px); /* سه ستون در دسکتاپ */
+            min-width: 280px;
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item i {
+            font-size: 3em;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* -------------------- فوتر (Footer) -------------------- */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+        
+        /* -------------------- واکنش‌گرایی (Media Queries) -------------------- */
+        @media (max-width: 992px) {
+            .feature-item {
+                flex: 1 1 calc(50% - 15px); /* دو ستون در تبلت */
+            }
+            
+            #hero h1 {
+                font-size: 2.8em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* مخفی کردن منو در موبایل (برای سادگی) */
+            }
+            
+            .navbar {
+                justify-content: center;
+            }
+            
+            .logo {
+                font-size: 1.5em;
+            }
+            
+            #hero {
+                padding: 100px 0;
+            }
+
+            #hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .feature-item {
+                flex: 1 1 100%; /* یک ستون در موبایل */
+            }
         }
     </style>
 </head>
 <body>
-<header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" 
-         alt="لوگوی ویندوز" 
-         style="width:120px; margin-bottom:10px;">
 
-    <h1>شهر آموزش</h1>
-</header>>
+    <!-- 1. نوار ناوبری (Header/Navbar) -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">MR LOGO</div>
+            <nav class="nav-links">
+                <a href="#hero">خانه</a>
+                <a href="#services">خدمات</a>
+                <a href="#">درباره ما</a>
+                <a href="#">تماس</a>
+            </nav>
+        </div>
+    </header>
 
-<nav>
-    <a href="index.html">خانه</a>
-    <a href="page1.html">آموزش ۱</a>
-    <a href="page2.html">آموزش ۲</a>
-    <a href="page3.html">آموزش ۳</a>
-    <a href="page4.html">آموزش ۴</a>
-    <a href="page5.html">آموزش ۵</a>
-    <a href="about.html">درباره من</a>
-</nav>
+    <!-- 2. بخش قهرمان (Hero Section) -->
+    <section id="hero">
+        <div class="container">
+            <h1>به دنیای طراحی‌های حرفه‌ای خوش آمدید</h1>
+            <p>بهینه‌سازی شده برای عملکرد، زیبایی و سازگاری کامل با تمامی دستگاه‌ها.</p>
+            <a href="#" class="cta-button">شروع پروژه</a>
+        </div>
+    </section>
 
-<main>
-    <h2>سلام! من امیرحسین کشوری هستم</h2>
-    <p>به وبسایت آموزشی من خوش آمدید! اینجا می‌توانید آموزش‌های مختلف ویندوز و کامپیوتر را یاد بگیرید.</p>
-</main>
+    <!-- 3. بخش خدمات (Services/Features) -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">چرا ما را انتخاب کنید؟</h2>
+            <div class="feature-grid">
+                
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>واکنش‌گرا (Responsive)</h3>
+                    <p>طراحی شده تا در موبایل، تبلت و دسکتاپ به بهترین شکل نمایش داده شود.</p>
+                </div>
 
-<footer>
-    &copy; 2025 امیرحسین کشوری
-</footer>
+                <div class="feature-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>سرعت بالا</h3>
+                    <p>استفاده از بهترین شیوه‌های کدنویسی برای لود سریع صفحات.</p>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>طراحی مدرن</h3>
+                    <p>استفاده از جدیدترین ترندهای دیزاین برای جذب مخاطب بیشتر.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- 4. بخش درباره ما (About Us - ساده) -->
+    <section id="about" style="padding: 80px 0;">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">درباره ما</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">ما تیمی هستیم که به ساختن حضور آنلاین قدرتمند شما کمک می‌کنیم. تمرکز ما بر سادگی، زیبایی و کارایی در هر خط کد است.</p>
+        </div>
+    </section>
+
+
+    <!-- 5. فوتر (Footer) -->
+    <footer>
+        <div class="container footer-links">
+            <a href="#">سیاست حفظ حریم خصوصی</a> |
+            <a href="#">شرایط استفاده</a> |
+            <a href="mailto:your.email@example.com">ارتباط با ما</a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 MR LOGO. تمامی حقوق محفوظ است. آدرس سایت: mrlogoo.github.io
+        </div>
+    </footer>
+    
+    <!-- 6. جاوا اسکریپت (برای تعاملات بیشتر در آینده) -->
+    <script>
+        // این بخش برای افزودن قابلیت‌های تعاملی در آینده است.
+        // در حال حاضر فقط کد HTML و CSS برای نمایش خوب کافی است.
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('وب‌سایت با موفقیت بارگذاری شد.');
+            
+            // مثال: تغییر رنگ دکمه اصلی بعد از 3 ثانیه
+            const ctaButton = document.querySelector('.cta-button');
+            if (ctaButton) {
+                setTimeout(() => {
+                    ctaButton.style.backgroundColor = '#dc3545'; // تغییر به قرمز
+                }, 3000);
+            }
+        });
+    </script>
 
 </body>
 </html>
