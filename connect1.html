@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با ما - MR LOGO</title>
+    
+    <!-- استفاده مجدد از فونت و آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* -------------------- تنظیمات پایه (تکرار شده برای سادگی) -------------------- */
+        :root {
+            --primary-color: #007bff; 
+            --secondary-color: #28a745; 
+            --text-dark: #333;
+            --bg-light: #fff;
+            --bg-gray: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+            background-color: var(--bg-gray);
+            direction: rtl;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: var(--text-dark);
+        }
+
+        /* -------------------- طرح‌بندی صفحه تماس (Layout) -------------------- */
+        .contact-layout {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .form-section, .info-section {
+            flex: 1 1 calc(50% - 25px);
+            min-width: 300px;
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* -------------------- بخش فرم (Form) -------------------- */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1em;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .submit-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* -------------------- بخش اطلاعات تماس (Info) -------------------- */
+        .info-box {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .info-box:last-child {
+            border-bottom: none;
+        }
+
+        .info-box i {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+        
+        .social-links {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .social-links a {
+            font-size: 2em;
+            margin: 0 15px;
+            color: #555;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* -------------------- واکنش‌گرایی -------------------- */
+        @media (max-width: 992px) {
+            .form-section, .info-section {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- اینجا باید یک هدر (Header) مشابه صفحه اصلی قرار گیرد -->
+    <header style="background-color: #212529; color: white; padding: 15px 0; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo" style="font-size: 1.8em; font-weight: 900;">MR LOGO</div>
+            <nav class="nav-links" style="font-size: 1em;">
+                <a href="ff.html" title="خانه">خانه</a><a href="iranianshop/index.html" style="color: white; margin-left: 25px;"></a>
+                <a href="#services" style="color: white;">خدمات</a>
+                <a href="#" style="color: white;">درباره ما</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">ارتباط با ما</h2>
+        
+        <div class="contact-layout">
+            
+            <!-- بخش فرم تماس -->
+            <div class="form-section">
+                <h3>ارسال پیام</h3>
+                <form action="#" method="POST"> 
+                    <!-- توجه: اکشن باید به یک اسکریپت سمت سرور یا سرویس خارجی متصل شود -->
+                    
+                    <div class="form-group">
+                        <label for="name">نام و نام خانوادگی:</label>
+                        <input type="text" id="name" name="user_name" placeholder="نام شما..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">آدرس ایمیل:</label>
+                        <input type="email" id="email" name="user_email" placeholder="example@domain.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">موضوع:</label>
+                        <input type="text" id="subject" name="user_subject" placeholder="موضوع پیام شما" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">متن پیام:</label>
+                        <textarea id="message" name="user_message" placeholder="پیام خود را اینجا بنویسید..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">ارسال پیام</button>
+                </form>
+            </div>
+            
+            <!-- بخش اطلاعات تماس -->
+            <div class="info-section">
+                <h3>اطلاعات تماس</h3>
+                
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <strong>آدرس:</strong><br>
+                    تهران، خیابان اصلی، پلاک ۱۰، واحد ۵
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <strong>تلفن:</strong><br>
+                    ۰۲۱ - ۸۸۸۸ ۸۸۸۸
+                </div>
+                
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <strong>ایمیل:</strong><br>
+                    contact@mrlogo.io 
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="لینکدین"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://t.me/yourchannel" target="_blank" title="تلگرام"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.instagram.com/yourpage" target="_blank" title="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- فوتر ساده (برای لینک دهی سریع) -->
+    <footer style="background-color: #212529; color: white; padding: 20px 0; text-align: center; margin-top: 40px;">
+        <div class="copyright" style="font-size: 0.9em; opacity: 0.7;">
+            &copy; 2025 MR LOGO.
+        </div>
+    </footer>
+    
+</body>
+</html>
+
