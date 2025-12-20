@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نمونه کارها | MR LOGO</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;600;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #007bff;
+      --dark: #212529;
+      --light: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      background-color: var(--light);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      font-weight: 900;
+      font-size: 1.7em;
+    }
+
+    section {
+      text-align: center;
+      padding: 70px 5%;
+    }
+
+    h1 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card .info {
+      padding: 15px;
+    }
+
+    .project-card h3 {
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.9em;
+    }
+
+    @media(max-width:768px){
+      .project-card { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>نمونه کارها</header>
+
+  <section>
+    <h1>چند نمونه از پروژه‌های اخیر</h1>
+
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x250?text=Portfolio+1" alt="پروژه ۱">
+        <div class="info">
+          <h3>فروشگاه اینترنتی گل</h3>
+          <p>طراحی فروشگاه آنلاین با پنل مدیریت سفارش و پرداخت آنلاین.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x250?text=Portfolio+2" alt="پروژه ۲">
+        <div class="info">
+          <h3>وب‌سایت شرکتی آرمان</h3>
+          <p>طراحی یک وب‌سایت رسمی برای معرفی خدمات شرکتی و تماس با مشتریان.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x250?text=Portfolio+3" alt="پروژه ۳">
+        <div class="info">
+          <h3>پورتفولیو طراح فریلنس</h3>
+          <p>نمایش آثار طراحی و بخش سفارش کارهای جدید به‌صورت ریسپانسیو.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 MR LOGO — تمامی حقوق محفوظ است.
+  </footer>
+
+</body>
+</html>
