@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدمات | MR LOGO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;600;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #007bff;
+      --dark: #212529;
+      --light: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      margin: 0;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    /* ▬▬ نوار بالا ▬▬ */
+    nav {
+      background-color: var(--dark);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    nav .logo { font-weight: 900; font-size: 1.4em; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0; padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: var(--primary); }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px 20px;
+      background: linear-gradient(to left, #e9f4ff, #ffffff);
+    }
+
+    header h1 { font-size: 2em; font-weight: 900; color: var(--dark); }
+    header p { color: #555; margin-top: 10px; }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 50px 20px 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .service-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        padding: 30px;
+        border-top: 5px solid var(--primary);
+        transition: box-shadow 0.3s, transform 0.3s;
+        text-align: right;
+    }
+
+    .service-card:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        transform: translateY(-3px);
+    }
+
+    .service-card h3 {
+        color: var(--primary);
+        font-size: 1.5em;
+        font-weight: 900;
+        margin-top: 0;
+    }
+
+    .service-card ul {
+        list-style: none;
+        padding-right: 0;
+        text-align: right;
+    }
+    .service-card ul li {
+        margin-bottom: 10px;
+        padding-right: 20px;
+        position: relative;
+        font-size: 0.95em;
+    }
+    .service-card ul li::before {
+        content: '✔';
+        position: absolute;
+        right: 0;
+        color: green;
+        font-weight: 900;
+    }
+    .price-tag {
+        display: block;
+        text-align: center;
+        font-weight: 900;
+        color: var(--dark);
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        background: #f0f4ff;
+        border: 1px dashed var(--primary);
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ▬▬ منو ▬▬ -->
+  <nav>
+    <div class="logo">MR LOGO</div>
+    <ul>
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="portfolio.html">نمونه کارها</a></li>
+      <li><a href="services.html">خدمات</a></li>
+      <li><a href="about.html">درباره ما</a></li>
+      <li><a href="contact.html">تماس با ما</a></li>
+      <li><a href="order.html">سفارش</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>خدمات تخصصی ما</h1>
+    <p>طیف کاملی از راه‌حل‌های طراحی و توسعه وب متناسب با نیاز کسب و کار شما.</p>
+  </header>
+
+  <section class="services-grid">
+    
+    <div class="service-card">
+      <h3>طراحی وب‌سایت شرکتی (Static/Corporate)</h3>
+      <p>طراحی صفحات معرفی برند، محصولات و خدمات به صورت ریسپانسیو و بهینه برای سئو.</p>
+      <ul>
+        <li>طراحی UX/UI سفارشی</li>
+        <li>کدنویسی تمیز (HTML/CSS/JS)</li>
+        <li>بهینه‌سازی سرعت لود</li>
+      </ul>
+      <span class="price-tag">شروع از 8 میلیون تومان</span>
+    </div>
+
+    <div class="service-card">
+      <h3>توسعه فروشگاه آنلاین (E-commerce)</h3>
+      <p>پیاده‌سازی کامل پلتفرم فروشگاهی با درگاه پرداخت و پنل مدیریت قدرتمند.</p>
+      <ul>
+        <li>یکپارچه‌سازی با سیستم انبارداری</li>
+        <li>ماژول مدیریت سفارشات و کاربران</li>
+        <li>امنیت بالا در تراکنش‌ها</li>
+      </ul>
+      <span class="price-tag">بر اساس پیچیدگی</span>
+    </div>
+
+    <div class="service-card">
+      <h3>طراحی هویت بصری و لوگو</h3>
+      <p>خلق یک نشان تجاری منحصربه‌فرد که بازتاب‌دهنده اهداف اصلی کسب و کار شما باشد.</p>
+      <ul>
+        <li>طراحی لوگوی مفهومی</li>
+        <li>پالت رنگی و تایپوگرافی</li>
+        <li>دفترچه راهنمای برند (Brand Guideline)</li>
+      </ul>
+      <span class="price-tag">شروع از 3 میلیون تومان</span>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 MR LOGO — تمامی حقوق محفوظ است.
+  </footer>
+
+</body>
+</html>
